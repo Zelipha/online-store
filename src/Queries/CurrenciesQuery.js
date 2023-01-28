@@ -2,7 +2,10 @@ import { gql } from "@apollo/client";
 
 const CURRENCIES = gql`
   query {
-    currencies
+    currencies {
+      symbol
+      label
+    }
   }
 `;
 
