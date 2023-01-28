@@ -27,12 +27,12 @@ export class ContextProvider extends Component {
     });
   };
 
-  setCounter = (counter, itemIndex) => {
+  setCounter = (counter, index) => {
     this.setState(
       update(this.state, {
         addedItems: {
-          [itemIndex]: {
-            counter: {
+          [index]: {
+            [this.state.addedItems[index].length - 2]: {
               $set: counter,
             },
           },
@@ -41,16 +41,15 @@ export class ContextProvider extends Component {
     );
   };
 
-  switchAttributes = (itemIndex, attributeIndex, attributeItem) => {
+  switchAttributes = (index, attributeIndex, attributeItem) => {
+    attributeIndex++;
     this.setState(
       update(this.state, {
         addedItems: {
-          [itemIndex]: {
-            attributes: {
-              [attributeIndex]: {
-                value: {
-                  $set: attributeItem.value,
-                },
+          [index]: {
+            [attributeIndex]: {
+              1: {
+                $set: attributeItem.value,
               },
             },
           },
