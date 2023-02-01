@@ -1,6 +1,6 @@
 .listing-page-product {
   display: grid;
-  grid-template: 11px 312px 26px 26px 74px/ 16px 280px 52px 15px 16px;
+  grid-template: 11px 300px 26px 26px 74px/ 16px 250px 52px 15px 16px;
   justify-self: center;
   align-items: center;
   text-decoration: none;
