@@ -9,17 +9,37 @@ import CartPage from "./Components/CartPage/CartPage";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 
 export class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { activeCategory: "", activeProductId: "" };
+  }
+
+  handleActiveCategory = (category) => {
+    this.setState({
+      ...this.state,
+      activeCategory: category,
+    });
+  };
+
+  handleActiveProductId = (id) => {
+    this.setState({
+      ...this.state,
+      activeProductId: id,
+    });
+  };
+
   render() {
     return (
       <ContextProvider>
         <Router>
-          <Navbar />
+          <Navbar handleActiveCategory={this.handleActiveCategory} />
           <Routes>
             <Route path="/" element={<WelcomePage />} />
             <Route exact path="/404" element={ErrorPage} />
             <Route exact path="/cart" element={<CartPage />} />
-            <Route exact path="/:category" element={<ListingPage />}></Route>
-            <Route exact path="/:category/:id" element={<DescriptionPage />}></Route>
+            <Route exact path="/:category" element={<ListingPage category={this.state.activeCategory} handleActiveProductId={this.handleActiveProductId} />}></Route>
+            <Route exact path="/:category/:id" element={<DescriptionPage id={this.state.activeProductId} handleActiveProductId={this.handleActiveProductId} />}></Route>
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </Router>
