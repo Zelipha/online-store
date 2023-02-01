@@ -21,6 +21,14 @@ export class Navbar extends Component {
     this.minicartIcon = React.createRef();
   }
 
+  navStyles = ({ isActive }) => {
+    return {
+      color: isActive ? "var(--green)" : "",
+      fontWeight: isActive ? "600" : "",
+      borderBottom: isActive ? "var(--green) solid 2px" : "",
+    };
+  };
+
   displayNavbar = (loading, error, data) => {
     const { currenciesOpen, minicartOpen } = this.state;
     if (loading) return "loading...";
@@ -30,12 +38,13 @@ export class Navbar extends Component {
         return <Link to="/404" />;
       }
       const { categories } = data;
+
       return (
         <>
           <nav>
             <div className="category-container">
               {categories.map((category) => (
-                <NavLink className="category" key={category.name} to={`/${category.name}`} activeClassName="active-category" onClick={() => this.props.handleActiveCategory(category.name)}>
+                <NavLink className="category" style={this.navStyles} key={category.name} to={`/${category.name}`} onClick={() => this.props.handleActiveCategory(category.name)}>
                   {category.name}
                 </NavLink>
               ))}

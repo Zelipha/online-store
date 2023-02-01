@@ -32,18 +32,6 @@ nav {
   width: 45%;
 }
 
-.category:hover {
-  color: var(--green);
-  font-weight: 600;
-  border-bottom: var(--green) solid 2px;
-}
-
-.active-category {
-  color: var(--green);
-  font-weight: 600;
-  border-bottom: var(--green) solid 2px;
-}
-
 .logo {
   grid-area: 1/4 / span 1 / span 1;
   justify-self: center;
