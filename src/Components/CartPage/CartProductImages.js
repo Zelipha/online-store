@@ -11,9 +11,6 @@ export class CartProductImages extends Component {
     this.state = {
       imageIndex: 0,
     };
-
-    this.previousImage = this.previousImage.bind(this);
-    this.nextImage = this.nextImage.bind(this);
   }
 
   previousImage = () => {

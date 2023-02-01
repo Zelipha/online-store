@@ -12,9 +12,6 @@ export class ListingPageProduct extends Component {
     this.state = {
       hover: false,
     };
-
-    this.hoverOver = this.hoverOver.bind(this);
-    this.hoverOut = this.hoverOut.bind(this);
   }
 
   hoverOver = () => {

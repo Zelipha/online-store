@@ -8,8 +8,6 @@ import { Link } from "react-router-dom";
 export class ListingPage extends Component {
   constructor(props) {
     super(props);
-
-    this.displayListingPage = this.displayListingPage.bind(this);
   }
 
   displayListingPage = (loading, error, data) => {

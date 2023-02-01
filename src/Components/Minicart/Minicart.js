@@ -10,7 +10,6 @@ export class Minicart extends Component {
     super(props);
 
     this.minicart = React.createRef();
-    this.handleOutsideMinicartClick = this.handleOutsideMinicartClick.bind(this);
   }
 
   static contextType = Context;

@@ -19,10 +19,6 @@ export class Navbar extends Component {
 
     this.currenciesIcon = React.createRef();
     this.minicartIcon = React.createRef();
-
-    this.displayNavbar = this.displayNavbar.bind(this);
-    this.isCurrenciesOpen = this.isCurrenciesOpen.bind(this);
-    this.isMinicartOpen = this.isMinicartOpen.bind(this);
   }
 
   displayNavbar = (loading, error, data) => {

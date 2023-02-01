@@ -10,9 +10,6 @@ export class Images extends Component {
     this.state = {
       image: true,
     };
-
-    this.initialImage = this.initialImage.bind(this);
-    this.changeImage = this.changeImage.bind(this);
   }
 
   initialImage = (image) => {

@@ -10,8 +10,6 @@ export class Currency extends Component {
   constructor(props) {
     super(props);
     this.currency = React.createRef();
-    this.displayCurrencies = this.displayCurrencies.bind(this);
-    this.handleOutsideCurrenciesClick = this.handleOutsideCurrenciesClick.bind(this);
   }
   static contextType = Context;
 

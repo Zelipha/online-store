@@ -7,8 +7,6 @@ import "./ListingPageImage.css";
 export class ListingPageImage extends Component {
   constructor(props) {
     super(props);
-
-    this.defaultAttributes = this.defaultAttributes.bind(this);
   }
 
   defaultAttributes = (selected, attributes, prices) => {

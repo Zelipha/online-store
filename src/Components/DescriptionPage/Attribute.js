@@ -5,8 +5,6 @@ import "./Attribute.css";
 export class Attribute extends Component {
   constructor(props) {
     super(props);
-
-    this.isChecked = this.isChecked.bind(this);
   }
 
   isChecked = (selected, item, attributeIndex) => {

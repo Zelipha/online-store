@@ -9,8 +9,6 @@ import "./DescriptionPage.css";
 export class DescriptionPage extends Component {
   constructor(props) {
     super(props);
-
-    this.displayProduct = this.displayProduct.bind(this);
   }
 
   displayProduct = (loading, error, data) => {

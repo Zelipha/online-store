@@ -11,8 +11,6 @@ import { Link } from "react-router-dom";
 export class CartPage extends Component {
   constructor(props) {
     super(props);
-
-    this.cartItem = this.cartItem.bind(this);
   }
 
   cartItem = (loading, error, data, item, itemIndex) => {

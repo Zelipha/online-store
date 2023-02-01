@@ -10,8 +10,6 @@ import "./MinicartList.css";
 export class MinicartList extends Component {
   constructor(props) {
     super(props);
-
-    this.minicartItem = this.minicartItem.bind(this);
   }
 
   minicartItem = (loading, error, data, item, itemIndex) => {

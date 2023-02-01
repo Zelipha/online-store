@@ -7,8 +7,6 @@ import "./MinicartFooter.css";
 export class MinicartFooter extends Component {
   constructor(props) {
     super(props);
-
-    this.totalPrice = this.totalPrice.bind(this);
   }
 
   totalPrice = (addedItems, currency) => {
