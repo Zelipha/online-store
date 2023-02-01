@@ -35,7 +35,7 @@ export class ListingPageProduct extends Component {
     const { category, product } = this.props;
     return (
       <div className="listing-page-product" key={product.name} onMouseOver={this.hoverOver} onMouseOut={this.hoverOut}>
-        <NavLink className="listing-page-product-link" to={`/${category}/${product.id}`}></NavLink>
+        <NavLink className="listing-page-product-link" to={`/${category}/${product.id}`} onClick={() => this.props.handleActiveProductId(product.id)}></NavLink>
         <ListingPageImage product={product} hover={hover} />
         <ListingPageDetails category={category} product={product} />
       </div>

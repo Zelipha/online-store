@@ -1,14 +1,14 @@
 .listing-page {
   position: relative;
-  top: 80px;
+  top: 60px;
   padding-inline: 60px;
   padding-bottom: 70px;
 }
 
 .listing-page-title {
   text-transform: capitalize;
-  font-size: 42px;
-  font-weight: normal;
+  font-size: 40px;
+  font-weight: 400;
   line-height: 68px;
   margin-block: 60px;
 }

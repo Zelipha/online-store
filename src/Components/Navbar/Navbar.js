@@ -39,7 +39,7 @@ export class Navbar extends Component {
           <nav>
             <div className="category-container">
               {categories.map((category) => (
-                <NavLink className="category" key={category.name} to={`/${category.name}`} activeClassName="active-category">
+                <NavLink className="category" key={category.name} to={`/${category.name}`} activeClassName="active-category" onClick={() => this.props.handleActiveCategory(category.name)}>
                   {category.name}
                 </NavLink>
               ))}

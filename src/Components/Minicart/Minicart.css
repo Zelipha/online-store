@@ -1,10 +1,10 @@
 .minicart {
-  width: 325px;
-  height: 540px;
+  width: 300px;
+  height: 500px;
   top: 78px;
   background-color: var(--white);
   position: fixed;
-  right: 6%;
+  right: 4%;
   z-index: 12;
   padding-inline: 16px;
   box-sizing: border-box;

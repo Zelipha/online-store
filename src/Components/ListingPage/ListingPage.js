@@ -13,19 +13,19 @@ export class ListingPage extends Component {
   }
 
   displayListingPage = (loading, error, data) => {
-    const { category } = this.props;
-
     if (loading) return "loading...";
     if (error) return "error...";
     if (data) {
       if (!data.category) {
         return <Link to="/404" />;
       }
+
       const { products } = data.category;
+
       return (
         <>
           {products.map((product) => (
-            <ListingPageProduct key={product.name} product={product} category={category} />
+            <ListingPageProduct key={product.name} product={product} category={data.category.name} handleActiveProductId={this.props.handleActiveProductId} />
           ))}
         </>
       );
@@ -34,12 +34,13 @@ export class ListingPage extends Component {
 
   render() {
     const { category } = this.props;
+    console.log(category);
 
     return (
       <div className="listing-page">
         <h1 className="listing-page-title">{category}</h1>
         <div className="listing-page-product-container">
-          <Query query={LIST} variables={{ category: category }}>
+          <Query query={LIST} variables={{ input: { title: category } }}>
             {({ loading, data, error }) => this.displayListingPage(loading, error, data)}
           </Query>
         </div>
@@ -47,5 +48,4 @@ export class ListingPage extends Component {
     );
   }
 }
-
 export default ListingPage;
