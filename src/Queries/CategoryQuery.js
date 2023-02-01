@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-const NAVIGATION = gql`
+const CATEGORY = gql`
   query {
     categories {
       name
@@ -8,4 +8,4 @@ const NAVIGATION = gql`
   }
 `;
 
-export default NAVIGATION;
+export default CATEGORY;
